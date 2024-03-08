@@ -1,14 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 17:47:50 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/08 18:32:45 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/03/08 17:58:29 by mfidimal          #+#    #+#             */
+/*   Updated: 2024/03/08 18:32:38 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_printf(const char *, ...);
-int	test(void);
+#include "../include/ft_printf.h"
+
+int	test(void)
+{
+	return 0;
+}
