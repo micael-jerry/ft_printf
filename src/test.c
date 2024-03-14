@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 17:58:29 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/08 18:32:38 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/14 19:25:50 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	test(void)
 {
-	return 0;
+	return ft_strlen("test");
 }
