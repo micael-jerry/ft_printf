@@ -1,25 +1,32 @@
 NAME = ft_printf.a
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
-INCLUDE = include/
-SRC = src/test.c
+INCLUDE = ./include
+
+SRC_DIR = ./src
+SRC = ft_printf.c
+
+OBJ_DIR = ./obj
 OBJ = $(SRC:.c=.o)
-LIBFT_DIR = libft/
+
+LIBFT_DIR = ./libft
+LIBFT = libft.a
 
 all: libftbuild $(NAME)
 
-%.o: %.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	mkdir -p $(OBJ_DIR)
 	$(CC) $(FLAGS) -I $(INCLUDE) -o $@ -c $<
 
 libftbuild:
 	make -C $(LIBFT_DIR)
 
-$(NAME): $(OBJ) $(LIBFT_DIR)libft.a
-	cp $(LIBFT_DIR)libft.a $(NAME)
-	ar -rc $(NAME) $(OBJ)
+$(NAME): $(OBJ_DIR)/$(OBJ) $(LIBFT_DIR)/$(LIBFT)
+	cp $(LIBFT_DIR)/$(LIBFT) $(NAME)
+	ar -rc $(NAME) $(OBJ_DIR)/$(OBJ)
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ_DIR)
 	make clean -C $(LIBFT_DIR)
 
 fclean: clean
