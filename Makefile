@@ -40,9 +40,10 @@ fclean: clean
 re: fclean all
 
 test: $(TEST_FILE) $(NAME)
-	python $(TEST_DIR)/test_header.py
 	$(CC) -o $(TEST_NAME) $^
+	@python $(TEST_DIR)/python/test_header.py
 	./$(TEST_NAME)
+	@python $(TEST_DIR)/python/test_footer.py
 	make testclean
 
 testclean: fclean $(TEST_NAME)
