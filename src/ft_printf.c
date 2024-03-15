@@ -6,30 +6,56 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 17:58:29 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 09:25:44 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/15 12:31:07 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
+#include <stdio.h>
 
-int	ft_printf(const char *format, ...)
+static int	print_args(char format, va_list params_info)
 {
-	va_list	params_info;
+	int	size;
+
+	size = 0;
+	if (format == '%')
+		size += ft_print_chr('%');
+	else if (format == 'c')
+		size += ft_print_chr(va_arg(params_info, int));
+	return (size);
+}
+
+static int	print(const char *format, va_list params_info)
+{
 	size_t	size_imprimed_caracters;
 	size_t	i;
 
-	va_start(params_info, format);
 	size_imprimed_caracters = 0;
 	i = 0;
 	while (format[i] != '\0')
 	{
-		if (format[i] != '%')
+		if (format[i] == '%' && format[i + 1] != '\0')
+		{
+			size_imprimed_caracters += print_args(format[i + 1], params_info);
+			i += 2;
+		}
+		else
 		{
 			ft_putchar_fd(format[i], 0);
 			size_imprimed_caracters++;
 			i++;
-			continue ;
 		}
 	}
 	return (size_imprimed_caracters);
+}
+
+int	ft_printf(const char *format, ...)
+{
+	va_list	params_info;
+	int		return_value;
+
+	va_start(params_info, format);
+	return_value = print(format, params_info);
+	va_end(params_info);
+	return (return_value);
 }
