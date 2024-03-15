@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 21:36:05 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 21:40:28 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/15 22:22:03 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ static int	ft_intlen(int n)
 {
 	int	len;
 
-	if (n < 0)
-		n = n * -1;
 	len = 1;
+	if (n < 0)
+	{
+		n = n * -1;
+		len++;
+	}
 	while (n > 9)
 	{
 		n = n / 10;
