@@ -6,14 +6,14 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 08:49:52 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/15 09:25:38 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int main(void)
+int	main(void)
 {
 	ft_printf("Hello world!\n");
-	return 0;
+	return (0);
 }
