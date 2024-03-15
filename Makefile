@@ -4,7 +4,7 @@ FLAGS = -Wall -Wextra -Werror
 INCLUDE = ./include
 
 SRC_DIR = ./src
-SRC = ft_printf.c
+SRC = ft_print_chr.c ft_printf.c
 
 OBJ_DIR = ./obj
 OBJ = $(SRC:.c=.o)
@@ -22,12 +22,12 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(OBJ_DIR)
 	$(CC) $(FLAGS) -I $(INCLUDE) -o $@ -c $<
 
-libftbuild:
+$(LIBFT_DIR)/$(LIBFT):
 	make -C $(LIBFT_DIR)
 
-$(NAME): libftbuild $(OBJ_DIR)/$(OBJ) $(LIBFT_DIR)/$(LIBFT)
+$(NAME): $(LIBFT_DIR)/$(LIBFT) $(addprefix $(OBJ_DIR)/,$(OBJ))
 	cp $(LIBFT_DIR)/$(LIBFT) $(NAME)
-	ar -rc $(NAME) $(OBJ_DIR)/$(OBJ)
+	ar -rc $(NAME) $(addprefix $(OBJ_DIR)/,$(OBJ))
 
 clean:
 	rm -rf $(OBJ_DIR)
