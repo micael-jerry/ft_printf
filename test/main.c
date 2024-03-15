@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 17:58:29 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/14 19:25:50 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
+/*   Updated: 2024/03/15 08:49:52 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	test(void)
+int main(void)
 {
-	return ft_strlen("test");
+	ft_printf("Hello world!\n");
+	return 0;
 }

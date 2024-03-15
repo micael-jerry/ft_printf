@@ -12,7 +12,11 @@ OBJ = $(SRC:.c=.o)
 LIBFT_DIR = ./libft
 LIBFT = libft.a
 
-all: libftbuild $(NAME)
+TEST_DIR = ./test
+TEST_FILE = $(TEST_DIR)/main.c
+TEST_NAME = ft_printf.test
+
+all: $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(OBJ_DIR)
@@ -21,7 +25,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 libftbuild:
 	make -C $(LIBFT_DIR)
 
-$(NAME): $(OBJ_DIR)/$(OBJ) $(LIBFT_DIR)/$(LIBFT)
+$(NAME): libftbuild $(OBJ_DIR)/$(OBJ) $(LIBFT_DIR)/$(LIBFT)
 	cp $(LIBFT_DIR)/$(LIBFT) $(NAME)
 	ar -rc $(NAME) $(OBJ_DIR)/$(OBJ)
 
@@ -35,4 +39,12 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+test: $(TEST_FILE) $(NAME)
+	$(CC) -o $(TEST_NAME) $^
+	./$(TEST_NAME)
+	make testclean
+
+testclean: fclean $(TEST_NAME)
+	rm -rf $(TEST_NAME)
+
+.PHONY: all clean fclean re test
