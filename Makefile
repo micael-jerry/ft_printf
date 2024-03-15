@@ -40,6 +40,7 @@ fclean: clean
 re: fclean all
 
 test: $(TEST_FILE) $(NAME)
+	python $(TEST_DIR)/test_header.py
 	$(CC) -o $(TEST_NAME) $^
 	./$(TEST_NAME)
 	make testclean
