@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 17:47:50 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 21:36:44 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/03/15 21:36:05 by mfidimal          #+#    #+#             */
+/*   Updated: 2024/03/15 21:40:28 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include <stdarg.h>
+#include "../include/ft_printf.h"
 
-int	ft_print_chr(char c);
-int	ft_print_str(char *str);
-int ft_print_pointer(void *pointer);
-int	ft_print_nbr(int n);
-int	ft_printf(const char *format, ...);
+static int	ft_intlen(int n)
+{
+	int	len;
+
+	if (n < 0)
+		n = n * -1;
+	len = 1;
+	while (n > 9)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+
+int	ft_print_nbr(int n)
+{
+	ft_putnbr_fd(n, 1);
+	return (ft_intlen(n));
+}

@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 20:43:25 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/15 21:47:09 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,16 @@ void	test_print_p_2(void)
 	printf("return val: %d\n", ft_printf_r);
 }
 
+void	test_print_d_1(void)
+{
+	printf("********************************\n");
+	printf("PRINTF:\n");
+	int printf_r = printf("Pointer: %d %d\n", 42, 24);
+	printf("return val: %d\n", printf_r);
+	printf("FT_PRINTF:\n");
+	int ft_printf_r = ft_printf("Pointer: %d %d\n", 42, 24);
+	printf("return val: %d\n", ft_printf_r);
+}
 int	main(void)
 {
 	test_print_without_args();
@@ -101,5 +111,6 @@ int	main(void)
 	test_print_str_1();
 	test_print_p_1();
 	test_print_p_2();
+	test_print_d_1();
 	return (0);
 }
