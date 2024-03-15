@@ -4,7 +4,7 @@ FLAGS = -Wall -Wextra -Werror
 INCLUDE = ./include
 
 SRC_DIR = ./src
-SRC = ft_print_chr.c ft_printf.c
+SRC = ft_print_chr.c ft_print_str.c ft_printf.c
 
 OBJ_DIR = ./obj
 OBJ = $(SRC:.c=.o)
