@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_chr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 17:47:50 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 12:18:31 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/03/15 10:41:45 by mfidimal          #+#    #+#             */
+/*   Updated: 2024/03/15 10:43:11 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include <stdarg.h>
+#include "../include/ft_printf.h"
 
-int	ft_print_chr(char c);
-int	ft_printf(const char *format, ...);
+int	ft_print_chr(char c)
+{
+	ft_putchar_fd(c, 0);
+	return (1);
+}
