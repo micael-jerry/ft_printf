@@ -12,7 +12,8 @@
 
 #include "../include/ft_printf.h"
 
-static void	ft_write_base_16_nb(unsigned int nbr, char *base, unsigned int size, int *len)
+static void	ft_write_base_16_nb(unsigned int nbr, char *base, unsigned int size,
+		int *len)
 {
 	char	a;
 
