@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 10:45:24 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/16 13:30:44 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,11 @@ void	test_print_str_1(void)
 
 void	test_print_p_1(void)
 {
-	int	test;
+	int	*test;
 	int	printf_r;
 	int	ft_printf_r;
 
-	test = 10;
+	*test = 10;
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Pointer: %p\n", &test);

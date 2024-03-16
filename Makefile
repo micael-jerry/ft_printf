@@ -1,4 +1,4 @@
-NAME = ft_printf.a
+NAME = libftprintf.a
 CC = gcc
 PY = python3
 FLAGS = -Wall -Wextra -Werror
