@@ -15,7 +15,7 @@
 
 int	ft_print_chr(char c);
 int	ft_print_str(char *str);
-int ft_print_pointer(void *pointer);
+int	ft_print_pointer(void *pointer);
 int	ft_print_nbr(int n);
 int	ft_print_u_nbr(unsigned int n);
 int	ft_printf(const char *format, ...);

@@ -10,107 +10,136 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "../include/ft_printf.h"
+#include <stdio.h>
 
 void	test_print_without_args(void)
 {
+	int	printf_r;
+	int	ft_printf_r;
+
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Hello!\n");
-	printf("return val: %d\n", printf_r);
+	printf_r = printf("Hello!\n");
+	printf("return (val: %d\n", printf_r));
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Hello!\n");
-	printf("return val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Hello!\n");
+	printf("return (val: %d\n", ft_printf_r));
 }
 
 void	test_print_chr_1(void)
 {
+	int	printf_r;
+	int	ft_printf_r;
+
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Hello%%!\n");
-	printf("return val: %d\n", printf_r);
+	printf_r = printf("Hello%%!\n");
+	printf("return (val: %d\n", printf_r));
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Hello%%!\n");
-	printf("return val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Hello%%!\n");
+	printf("return (val: %d\n", ft_printf_r));
 }
 
 void	test_print_chr_2(void)
 {
+	int	printf_r;
+	int	ft_printf_r;
+
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Hello%c! \n", '#');
-	printf("return val: %d\n", printf_r);
+	printf_r = printf("Hello%c! \n", '#');
+	printf("return (val: %d\n", printf_r));
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Hello%c! \n", '#');
-	printf("return val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Hello%c! \n", '#');
+	printf("return (val: %d\n", ft_printf_r));
 }
 
 void	test_print_chr_3(void)
 {
+	int	printf_r;
+	int	ft_printf_r;
+
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Hello%c!%c \n", '#', 'e');
-	printf("return val: %d\n", printf_r);
+	printf_r = printf("Hello%c!%c \n", '#', 'e');
+	printf("return (val: %d\n", printf_r));
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Hello%c!%c \n", '#', 'e');
-	printf("return val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Hello%c!%c \n", '#', 'e');
+	printf("return (val: %d\n", ft_printf_r));
 }
 
 void	test_print_str_1(void)
 {
+	int	printf_r;
+	int	ft_printf_r;
+
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Hello %c%s!\n", 'W', "orld");
-	printf("return val: %d\n", printf_r);
+	printf_r = printf("Hello %c%s!\n", 'W', "orld");
+	printf("return (val: %d\n", printf_r));
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Hello %c%s!\n", 'W', "orld");
-	printf("return val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Hello %c%s!\n", 'W', "orld");
+	printf("return (val: %d\n", ft_printf_r));
 }
 
 void	test_print_p_1(void)
 {
-	int test = 10;
+	int	test;
+	int	printf_r;
+	int	ft_printf_r;
+
+	test = 10;
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Pointer: %p\n", &test);
-	printf("return val: %d\n", printf_r);
+	printf_r = printf("Pointer: %p\n", &test);
+	printf("return (val: %d\n", printf_r));
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Pointer: %p\n", &test);
-	printf("return val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Pointer: %p\n", &test);
+	printf("return (val: %d\n", ft_printf_r));
 }
 
 void	test_print_p_2(void)
 {
-	int test = 10;
+	int	test;
+	int	printf_r;
+	int	ft_printf_r;
+
+	test = 10;
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Pointer: %p %p\n", &test, test);
-	printf("return val: %d\n", printf_r);
+	printf_r = printf("Pointer: %p %p\n", &test, test);
+	printf("return (val: %d\n", printf_r));
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Pointer: %p %p\n", &test, test);
-	printf("return val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Pointer: %p %p\n", &test, test);
+	printf("return (val: %d\n", ft_printf_r));
 }
 
 void	test_print_d_1(void)
 {
+	int	printf_r;
+	int	ft_printf_r;
+
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Pointer: %d %i\n", 42, -24);
-	printf("return val: %d\n", printf_r);
+	printf_r = printf("Pointer: %d %i\n", 42, -24);
+	printf("return (val: %d\n", printf_r));
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Pointer: %d %i\n", 42, -24);
-	printf("return val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Pointer: %d %i\n", 42, -24);
+	printf("return (val: %d\n", ft_printf_r));
 }
 
 void	test_print_u_1(void)
 {
+	int	printf_r;
+	int	ft_printf_r;
+
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	int printf_r = printf("Pointer: %u %u\n", 42, -24);
+	printf_r = printf("Pointer: %u %u\n", 42, -24);
 	printf("return val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
-	int ft_printf_r = ft_printf("Pointer: %u %u\n", 42, -24);
+	ft_printf_r = ft_printf("Pointer: %u %u\n", 42, -24);
 	printf("return val: %d\n", ft_printf_r);
 }
 

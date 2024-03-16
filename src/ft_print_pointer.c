@@ -12,9 +12,10 @@
 
 #include "../include/ft_printf.h"
 
-static void	ft_write_base_16_nb(unsigned long long int nbr, char *base, int size, int *len)
+static void	ft_write_base_16_nb(unsigned long long int nbr, char *base,
+		int size, int *len)
 {
-	char			a;
+	char	a;
 
 	if (nbr >= (unsigned long long int)size)
 		ft_write_base_16_nb(nbr / size, base, size, len);
@@ -38,7 +39,7 @@ static int	ft_putnbr_base_16(unsigned long long int nbr)
 int	ft_print_pointer(void *pointer)
 {
 	unsigned long long int	pointer_to_int;
-	int	size;
+	int						size;
 
 	pointer_to_int = (unsigned long long int)pointer;
 	ft_putstr_fd("0x", 1);
