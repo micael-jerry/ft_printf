@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 17:47:50 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 10:40:41 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/03/16 10:37:55 by mfidimal          #+#    #+#             */
+/*   Updated: 2024/03/16 10:45:46 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include <stdarg.h>
+#include "../include/ft_printf.h"
 
-int	ft_print_chr(char c);
-int	ft_print_str(char *str);
-int	ft_print_pointer(void *pointer);
-int	ft_print_nbr(int n);
-int	ft_print_u_nbr(unsigned int n);
-int	ft_print_hex_lower(int n);
-int	ft_print_hex_upper(int n);
-int	ft_printf(const char *format, ...);
+
+int	ft_print_hex_lower(int n)
+{
+	return (n);
+}
+
+int	ft_print_hex_upper(int n)
+{
+	return (n);
+}

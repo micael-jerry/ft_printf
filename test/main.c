@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 09:54:20 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/16 10:45:24 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ void	test_print_chr_1(void)
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Hello%%!\n");
-	printf("return val: %d\n", printf_r);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Hello%%!\n");
-	printf("return val: %d\n", ft_printf_r);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 void	test_print_chr_2(void)
@@ -49,10 +49,10 @@ void	test_print_chr_2(void)
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Hello%c! \n", '#');
-	printf("return val: %d\n", printf_r);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Hello%c! \n", '#');
-	printf("return val: %d\n", ft_printf_r);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 void	test_print_chr_3(void)
@@ -63,10 +63,10 @@ void	test_print_chr_3(void)
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Hello%c!%c \n", '#', 'e');
-	printf("return val: %d\n", printf_r);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Hello%c!%c \n", '#', 'e');
-	printf("return val: %d\n", ft_printf_r);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 void	test_print_str_1(void)
@@ -77,10 +77,10 @@ void	test_print_str_1(void)
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Hello %c%s!\n", 'W', "orld");
-	printf("return val: %d\n", printf_r);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Hello %c%s!\n", 'W', "orld");
-	printf("return val: %d\n", ft_printf_r);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 void	test_print_p_1(void)
@@ -109,7 +109,7 @@ void	test_print_p_2(void)
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Pointer: %p %p\n", &test, &test);
-	printf("return val: %d\n", printf_r);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Pointer: %p %p\n", &test, &test);
 	printf("return (val: %d\n", ft_printf_r);
@@ -123,10 +123,10 @@ void	test_print_d_1(void)
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Pointer: %d %i\n", 42, -24);
-	printf("return val: %d\n", printf_r);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Pointer: %d %i\n", 42, -24);
-	printf("return val: %d\n", ft_printf_r);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 void	test_print_u_1(void)
@@ -137,10 +137,24 @@ void	test_print_u_1(void)
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Pointer: %u %u\n", 42, -24);
-	printf("return val: %d\n", printf_r);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Pointer: %u %u\n", 42, -24);
-	printf("return val: %d\n", ft_printf_r);
+	printf("return_val: %d\n", ft_printf_r);
+}
+
+void	test_print_x_1(void)
+{
+	int	printf_r;
+	int	ft_printf_r;
+
+	printf("********************************\n");
+	printf("PRINTF:\n");
+	printf_r = printf("Pointer: %x\n", 42);
+	printf("return_val: %d\n", printf_r);
+	printf("FT_PRINTF:\n");
+	ft_printf_r = ft_printf("Pointer: %x\n", 42);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 int	main(void)
@@ -154,5 +168,6 @@ int	main(void)
 	test_print_p_2();
 	test_print_d_1();
 	test_print_u_1();
+	test_print_x_1();
 	return (0);
 }

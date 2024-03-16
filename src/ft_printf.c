@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 17:58:29 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 22:27:35 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/16 10:42:38 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@ static int	print_args(char format, va_list params_info)
 		size += ft_print_nbr(va_arg(params_info, int));
 	else if (format == 'u')
 		size += ft_print_u_nbr(va_arg(params_info, unsigned int));
+	else if (format == 'x')
+		size += ft_print_hex_lower(va_arg(params_info, int));
+	else if (format == 'X')
+		size += ft_print_hex_upper(va_arg(params_info, int));
 	return (size);
 }
 
