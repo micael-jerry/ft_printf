@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 13:30:44 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/16 13:39:50 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	test_print_without_args(void)
 	printf("********************************\n");
 	printf("PRINTF:\n");
 	printf_r = printf("Hello!\n");
-	printf("return (val: %d\n", printf_r);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Hello!\n");
-	printf("return (val: %d\n", ft_printf_r);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 void	test_print_chr_1(void)
@@ -89,14 +89,13 @@ void	test_print_p_1(void)
 	int	printf_r;
 	int	ft_printf_r;
 
-	*test = 10;
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	printf_r = printf("Pointer: %p\n", &test);
-	printf("return (val: %d\n", printf_r);
+	printf_r = printf("Pointer: %p\n", NULL);
+	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
-	ft_printf_r = ft_printf("Pointer: %p\n", &test);
-	printf("return (val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("Pointer: %p\n", NULL);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 void	test_print_p_2(void)
@@ -112,7 +111,7 @@ void	test_print_p_2(void)
 	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
 	ft_printf_r = ft_printf("Pointer: %p %p\n", &test, &test);
-	printf("return (val: %d\n", ft_printf_r);
+	printf("return_val: %d\n", ft_printf_r);
 }
 
 void	test_print_d_1(void)
