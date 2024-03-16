@@ -1,5 +1,6 @@
 NAME = ft_printf.a
 CC = gcc
+PY = python3
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = ./include
 
@@ -41,9 +42,9 @@ re: fclean all
 
 test: $(TEST_FILE) $(NAME)
 	$(CC) -o $(TEST_NAME) $^
-	@python $(TEST_DIR)/python/test_header.py
+	@$(PY) $(TEST_DIR)/python/test_header.py
 	./$(TEST_NAME)
-	@python $(TEST_DIR)/python/test_footer.py
+	@$(PY) $(TEST_DIR)/python/test_footer.py
 	make testclean
 
 testclean: fclean $(TEST_NAME)
