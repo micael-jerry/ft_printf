@@ -6,12 +6,21 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 17:58:29 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 10:42:38 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/16 14:06:01 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include <stdio.h>
+
+static int	is_format(char c)
+{
+	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'u'
+		|| c == 'x' || c == 'X' || c == '%')
+		return (1);
+	else
+		return (0);
+}
 
 static int	print_args(char format, va_list params_info)
 {
@@ -46,7 +55,7 @@ static int	print(const char *format, va_list params_info)
 	i = 0;
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] != '\0')
+		if (format[i] == '%' && is_format(format[i + 1]))
 		{
 			size_imprimed_caracters += print_args(format[i + 1], params_info);
 			i += 2;
