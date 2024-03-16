@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 17:10:21 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 16:28:39 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/16 16:44:37 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,12 @@ int	ft_print_pointer(void *pointer)
 {
 	unsigned long	pointer_to_int;
 	int						size;
-
+	
+	if (!pointer)
+	{
+		ft_putstr_fd("(nil)", 1);
+		return (5);
+	}
 	pointer_to_int = (unsigned long)pointer;
 	ft_putstr_fd("0x", 1);
 	size = 2;
