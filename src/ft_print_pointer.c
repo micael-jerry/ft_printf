@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 17:10:21 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 16:44:37 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/21 19:48:37 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ static int	ft_putnbr_base_16(unsigned long nbr)
 int	ft_print_pointer(void *pointer)
 {
 	unsigned long	pointer_to_int;
-	int						size;
-	
+	int				size;
+
 	if (!pointer)
 	{
 		ft_putstr_fd("(nil)", 1);
