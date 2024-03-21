@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 21:36:05 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 22:22:03 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/21 19:38:57 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static int	ft_intlen(int n)
 {
 	int	len;
 
+	if (n == INT_MIN_VALUE)
+		return (11);
 	len = 1;
 	if (n < 0)
 	{

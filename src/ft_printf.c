@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 17:58:29 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 14:06:01 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/21 19:24:52 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int	print(const char *format, va_list params_info)
 		}
 		else
 		{
-			ft_putchar_fd(format[i], 0);
+			ft_putchar_fd(format[i], 1);
 			size_imprimed_caracters++;
 			i++;
 		}

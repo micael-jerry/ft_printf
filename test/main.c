@@ -6,25 +6,25 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 16:52:51 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/21 19:31:26 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include <stdio.h>
 
-void	test_print_without_args(void)
+void	basic_test(void)
 {
 	int	printf_r;
 	int	ft_printf_r;
 
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	printf_r = printf("Hello!\n");
-	printf("return_val: %d\n", printf_r);
+	printf_r = printf("1, 2, 3, -d test, testing, 0.4s sound, 1, 2, 3xp, sound, -*dtest");
+	printf("\nreturn_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
-	ft_printf_r = ft_printf("Hello!\n");
-	printf("return_val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("1, 2, 3, -d test, testing, 0.4s sound, 1, 2, 3xp, sound, -*dtest");
+	printf("\nreturn_val: %d\n", ft_printf_r);
 }
 
 void	test_print_chr_1(void)
@@ -119,13 +119,13 @@ void	test_print_d_1(void)
 	int	printf_r;
 	int	ft_printf_r;
 
-	printf("********************************\n");
+	printf("********************************\n%%d test 1\n");
 	printf("PRINTF:\n");
-	printf_r = printf("Pointer: %d %i\n", 42, -24);
-	printf("return_val: %d\n", printf_r);
+	printf_r = printf("%d %d", 2147483647, (int)-2147483648);
+	printf("\nreturn_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
-	ft_printf_r = ft_printf("Pointer: %d %i\n", 42, -24);
-	printf("return_val: %d\n", ft_printf_r);
+	ft_printf_r = ft_printf("%d %d", 2147483647, (int)-2147483648);
+	printf("\nreturn_val: %d\n", ft_printf_r);
 }
 
 void	test_print_u_1(void)
@@ -158,7 +158,7 @@ void	test_print_x_1(void)
 
 int	main(void)
 {
-	test_print_without_args();
+	basic_test();
 	test_print_chr_1();
 	test_print_chr_2();
 	test_print_chr_3();
