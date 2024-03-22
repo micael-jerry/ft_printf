@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/21 19:31:26 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/22 13:10:21 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ void	basic_test(void)
 
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	printf_r = printf("1, 2, 3, -d test, testing, 0.4s sound, 1, 2, 3xp, sound, -*dtest");
+	printf_r = printf(
+			"1, 2, 3, -d test, testing, 0.4s sound, 1, 2, 3xp, sound, -*dtest");
 	printf("\nreturn_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
-	ft_printf_r = ft_printf("1, 2, 3, -d test, testing, 0.4s sound, 1, 2, 3xp, sound, -*dtest");
+	ft_printf_r = ft_printf(
+			"1, 2, 3, -d test, testing, 0.4s sound, 1, 2, 3xp, sound, -*dtest");
 	printf("\nreturn_val: %d\n", ft_printf_r);
 }
 
