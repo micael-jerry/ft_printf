@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 08:28:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/22 13:10:21 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/22 15:34:01 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,13 +148,15 @@ void	test_print_x_1(void)
 {
 	int	printf_r;
 	int	ft_printf_r;
+	unsigned int u;
 
+	u = 2147483650;
 	printf("********************************\n");
 	printf("PRINTF:\n");
-	printf_r = printf("Pointer: %x\n", 42);
+	printf_r = printf("Pointer: %x\n", u);
 	printf("return_val: %d\n", printf_r);
 	printf("FT_PRINTF:\n");
-	ft_printf_r = ft_printf("Pointer: %x\n", 42);
+	ft_printf_r = ft_printf("Pointer: %x\n", u);
 	printf("return_val: %d\n", ft_printf_r);
 }
 
