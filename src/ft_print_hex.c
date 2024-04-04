@@ -6,11 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 10:37:55 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/16 11:28:35 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:37:36 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 static void	ft_write_base_16_nb(unsigned int nbr, char *base, unsigned int size,
 		int *len)

@@ -13,10 +13,6 @@ OBJ = $(SRC:.c=.o)
 LIBFT_DIR = ./libft
 LIBFT = libft.a
 
-TEST_DIR = ./test
-TEST_FILE = $(TEST_DIR)/main.c
-TEST_NAME = ft_printf.test
-
 all: $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
@@ -39,15 +35,5 @@ fclean: clean
 	make fclean -C $(LIBFT_DIR)
 
 re: fclean all
-
-test: $(TEST_FILE) $(NAME)
-	$(CC) -o $(TEST_NAME) $^
-	@$(PY) $(TEST_DIR)/python/test_header.py
-	./$(TEST_NAME)
-	@$(PY) $(TEST_DIR)/python/test_footer.py
-	make testclean
-
-testclean: fclean $(TEST_NAME)
-	rm -rf $(TEST_NAME)
 
 .PHONY: all clean fclean re test

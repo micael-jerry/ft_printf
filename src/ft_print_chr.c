@@ -6,11 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 10:41:45 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 21:08:03 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:37:30 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_print_chr(char c)
 {

@@ -6,11 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 22:12:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/15 22:33:07 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:38:07 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 static int	ft_uintlen(unsigned int n)
 {
